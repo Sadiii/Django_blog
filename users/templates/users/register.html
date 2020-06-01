@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="row border border-light container-fluid">
+    <div class="col col-md-8">
+        <!-- Default form subscription -->
+        <form class="p-5" method="post">
+            {% csrf_token %}
+            <p class="h4 mb-4">Register</p>
+
+                {{form.username|as_crispy_field}}
+
+                {{form.email|as_crispy_field}}
+
+                {{form.password1|as_crispy_field}}
+
+                {{form.password2|as_crispy_field}}
+
+            <!-- Sign in button -->
+            <button class="btn btn-outline-mdb-color btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">Sign Up</button>
+        </form>
+        <!-- Default form subscription -->
+        <div class="">
+            <p>Already have an Account! <a href="{% url 'login' %}">Sign in</a></p>
+        </div>
+    </div>
+</div>
+{% endblock content %}

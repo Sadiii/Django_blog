@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="row border border-light container-fluid">
+    <div class="col col-md-10">
+        <!-- Default form subscription -->
+        <form class="p-5" method="post">
+            {% csrf_token %}
+            <p class="h4 mb-4">Are Your Sure you want to delete {{ post.title }}</p>
+            <div>
+                <button class="btn btn-outline-danger btn-rounded btn-sm z-depth-0 my-4 waves-effect" type="submit">Yes, Delete</button>
+                <a href="{% url 'blog-detail' post.id %}" class="btn btn-outline-secondary btn-rounded btn-sm z-depth-0 my-4 waves-effect">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}

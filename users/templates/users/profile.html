@@ -1,0 +1,40 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <!-- Card -->
+    <div class="card testimonial-card">
+
+      <!-- Background color -->
+      <div class="card-up mdb-color lighten-1"></div>
+
+      <!-- Avatar -->
+      <div class="avatar mx-auto white">
+        <img src="{{ user.profile.image.url}}" class="rounded-circle"
+          alt="woman avatar">
+      </div>
+
+
+      <!-- Content -->
+      <div class="card-body">
+        <!-- Name -->
+        <h4 class="card-title">{{ user.username }}</h4>
+        <hr>
+        <p class="card-text">{{ user.email }}</p>
+    </div>
+     <form class="p-5" method="post", enctype="multipart/form-data">
+            {% csrf_token %}
+            <p class="h4 mb-4">Update Profile</p>
+
+                {{u_form.username|as_crispy_field}}
+
+                {{u_form.email|as_crispy_field}}
+
+                {{p_form|crispy}}
+
+            <!-- Sign in button -->
+            <button class="btn btn-outline-mdb-color btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">Update</button>
+        </form>
+
+    </div>
+    <!-- Card -->
+{% endblock content %}
