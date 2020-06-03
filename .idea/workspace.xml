@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="46dda087-f428-41c5-b323-d99e3811a711" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +90,7 @@
       <workItem from="1590895324172" duration="4170000" />
       <workItem from="1590977096792" duration="13363000" />
       <workItem from="1591031069530" duration="4561000" />
-      <workItem from="1591162001488" duration="396000" />
+      <workItem from="1591162001488" duration="1415000" />
     </task>
     <servers />
   </component>
